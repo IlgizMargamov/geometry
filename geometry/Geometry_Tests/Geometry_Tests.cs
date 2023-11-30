@@ -25,10 +25,10 @@ public class Geometry_Tests
     [TestCase(1,5,5, TriangleType.ACUTE)]
     [TestCase(3,4,5, TriangleType.RIGHT)]
     [TestCase(12,13,5, TriangleType.RIGHT)]
-    [TestCase(2,5,3, TriangleType.ACUTE)]
+    [TestCase(2,5,3, TriangleType.OBTUSE)]
     [TestCase(4,23,56, TriangleType.OBTUSE)]
     [TestCase(5,23,56, TriangleType.OBTUSE)]
-    [TestCase(66,1,55, TriangleType.ACUTE)]
+    [TestCase(66,1,55, TriangleType.OBTUSE)]
     public void Test_TriangleType(double firstSide, double secondSide, double thirdSide, TriangleType expected)
     {
         var actual = _triangleTypeIdentifier.GetTriangleType(firstSide, secondSide, thirdSide);
