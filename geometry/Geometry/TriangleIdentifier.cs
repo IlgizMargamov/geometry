@@ -19,13 +19,15 @@ public class EuclidTriangleTypeIdentifier : ITriangleTypeIdentifier
         {
             return TriangleType.ACUTE;
         }
+        double[] sides = { firstSide, secondSide, thirdSide };
+        Array.Sort(sides);
 
-        if (Math.Pow(firstSide, 2) + Math.Pow(secondSide, 2) > Math.Pow(thirdSide, 2))
+        if (Math.Pow(sides[0], 2) + Math.Pow(sides[1], 2) > Math.Pow(sides[2], 2))
         {
             return TriangleType.ACUTE;
         }
 
-        if (Math.Abs(Math.Pow(firstSide, 2) + Math.Pow(secondSide, 2) - Math.Pow(thirdSide, 2)) < TOLERANCE)
+        if (Math.Abs(Math.Pow(sides[0], 2) + Math.Pow(sides[1], 2) - Math.Pow(sides[2], 2)) < TOLERANCE)
         {
             return TriangleType.RIGHT;
         }
