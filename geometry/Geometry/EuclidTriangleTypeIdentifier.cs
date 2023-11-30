@@ -18,7 +18,7 @@ public class EuclidTriangleTypeIdentifier : ITriangleTypeIdentifier
         {
             return TriangleType.ACUTE;
         }
-        double[] sides = { firstSide, secondSide, thirdSide };
+        var sides = new []{ firstSide, secondSide, thirdSide };
         Array.Sort(sides);
 
         var firstSidePow = Math.Pow(sides[0], 2);
